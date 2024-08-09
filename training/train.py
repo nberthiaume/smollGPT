@@ -110,7 +110,7 @@ def train(
         initial_learning_rate=config.learning_rate, 
         final_learning_rate=0.1*config.learning_rate,
         decay_until_iter_number=tokens_in_training_data / tokens_per_effective_batch,
-        warmup_steps=(tokens_in_training_data / tokens_per_effective_batch) / 5, # 2% of epoch
+        warmup_steps=(tokens_in_training_data / tokens_per_effective_batch) / 5,
     )
 
     tokens_processed = 0
@@ -191,13 +191,3 @@ def train(
                 ))
                 effective_batch_number += 1
                 loss_counter = 0
-
-            # TODO Figure out distributed proccesing
-            # TODO Make everything float16???
-            
-        #  === Post epoch calculations ===
-        # Measure loss for epoch
-        # Keep track of the loss 
-        # print(f"Epoch {epoch+1}, Train Loss: {epoch_train_loss:.4f}, Validation Loss: {epoch_valdiation_loss:.4f}, Learning Rate: {optimizer.param_groups[0]['lr']:.6f}")
-
-
