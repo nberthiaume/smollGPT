@@ -1,0 +1,1 @@
+time,epoch,tokens_processed,effective_batch_number,training_loss,validation_loss,learning_rate,gradient_norm

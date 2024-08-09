@@ -1,0 +1,6 @@
+2024-08-09 19:18:09,270 - INFO - 2.05 Billion tokens in training data.
+2024-08-09 19:18:09,270 - INFO - 262.14 K tokens per effective batch.
+2024-08-09 19:18:09,270 - INFO - Training on mps.
+2024-08-09 19:18:09,270 - INFO - Model has 134.75 M parameters
+2024-08-09 19:18:09,270 - INFO - Model has 15.22 tokens per parameters
+2024-08-09 19:18:10,079 - INFO - Begin epoch 0
