@@ -26,7 +26,7 @@ I rented a H100 equipped server from Lambda Cloud and experimented with it for a
 
 I settled on a configuration of around 130M parameters, with a context window of 1024 tokens, 768 embedding dimensions and 8 layers with 8 attention heads each.
 
-The final training run went on for 8 hours, and read the whole of english wikipedia 4 times and a bit more. The model ended up with a training loss of around 3.15 to 3.20. It does not show obvious signs of overfitting when testing on the validation set.
+The final training run went on for 8 hours, and read the whole of english wikipedia 4 times and a bit more. The whole exercise costs ~40$. The model ended up with a training loss of around 3.15 to 3.20. It does not show signs of overfitting when testing on the validation set.
 
 The trained model learned to form decent english sentences, meaning it shows a decent level of coherence. It's knowledge and pertinence however is very poor. See the `Samples` section. 
 
@@ -60,3 +60,8 @@ NOTE: This model is NOT trained to be an assistant, it can only complete sentenc
 **Shrek is and always will be** depressed under the weight of excessive food products.
 
 **The capital of the USA is** the city of Dallas, Texas, and had a population of 71 as of the 2010 U.S. census. 
+
+
+## Improvements
+
+If I were to try another training run, I would consider using a smaller vocabulary size as this is only training on english text, and the vocabulary contains symbols from multiple languages. I would consider using a smaller context window since my goal was only to produce small sentences, using 1024 tokens is certainly wasting capacity. I would also consider a more aggressive learning rate so it flatlines later in the process.
